@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableAutoConfiguration
 @EntityScan({"com.vikas"})
-public class UnivCruDappApplication {
+public class UnivCruDappApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UnivCruDappApplication.class, args);

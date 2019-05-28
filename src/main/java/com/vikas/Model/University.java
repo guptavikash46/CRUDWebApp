@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import javax.persistence.*;
 
 @Entity
-@SequenceGenerator(name="custom", initialValue = 45291, allocationSize = 100000000)
+@SequenceGenerator(name="custom", initialValue = 45291)
 public class University {
 
     @Id
