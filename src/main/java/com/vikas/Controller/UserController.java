@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @CrossOrigin(origins = "*")
 public class UserController {
 
-    @RequestMapping("/info")
+    @RequestMapping("/home")
     public String home(){
         return "hello";
     }
