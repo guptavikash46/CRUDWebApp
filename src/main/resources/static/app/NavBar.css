@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #88d59f;
+    color: #fff;
+    transition: all 0.3s;
+}
+.list-unstyled-components{
+    padding: 50px;
+}
+#title-page{
+    background: #000000;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
