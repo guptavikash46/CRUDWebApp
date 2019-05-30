@@ -1,5 +1,6 @@
 package com.vikas.Univ.UnivCRUDapp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -13,6 +14,7 @@ import org.springframework.security.web.authentication.LoginUrlAuthenticationEnt
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Qualifier("userServiceImpl")
     @Autowired
     private UserDetailsService userDetailsService;
 
@@ -27,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http)throws Exception{
         http.csrf().disable().exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"))
-                .and().authorizeRequests().antMatchers("/login", "/signup", "/login/**", "/logout").permitAll()
+                .and().authorizeRequests().antMatchers("/login", "/signup", "/signup/**", "/login/**", "/logout").permitAll()
                 .antMatchers("/app", "/app/**").fullyAuthenticated();
     }
 

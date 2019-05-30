@@ -23,3 +23,17 @@
     text-align: center;
     font-family: Arial;
 }
+.dropdown-toggle{
+    color: black;
+    margin: 30px;
+}
+.main-ul-elements{
+    margin: 30px;
+    color: black;
+}
+.forSpacing{
+    color: black;
+}
+.forSpacingRestOthers{
+    color: black;
+}

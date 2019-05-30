@@ -1,20 +1,26 @@
-$(document).ready(function() {
-   // var uniList = $(".list-group");
+$("#loginButton").on("click", function () {
     $.ajax({
-        url: "http://localhost:8080/app/universities",
+        url: "http://localhost:8080/login/user",
         type: "GET",
         dataType: 'json',
+        data: { uName: $("#exampleInputEmail1").val(),
+            pass: $("#exampleInputPassword1").val()}
     })
-        .done(function (univInfo) {
-            $.each(univInfo, function (i, uni) {
-                // uniList.append('<li class="list-group-item">University ID:'+uni.univ_id+'</li>'+
-                //     '<li class="list-group-item">Name:'+uni.univ_name+'</li>'+
-                //     '<li class="list-group-item">Country:'+uni.univ_country+'</li></br></br');
+        .done(function (value) {
+            if(value == true){
+                $(document).ajaxSuccess(function () {
+                    window.location.href = '/app/home';
+                })
+            }
+            else {
+                alert("Wrong credentials entered");
+            }
             })
-        })
         .fail(function (xhr, status, errorThrown) {
-            // alert("error found");
-            // console.log(status);
+            alert("Oops! looks like this error is rare and shouldn't happen, give us some time to think!");
+            console.log(status);
+            console.log(errorThrown);
         })
-
 });
+
+
