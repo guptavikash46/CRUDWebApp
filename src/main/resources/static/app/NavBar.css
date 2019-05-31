@@ -15,7 +15,7 @@
     transition: all 0.3s;
 }
 .list-unstyled-components{
-    padding: 50px;
+    padding: 20px;
 }
 #title-page{
     background: #000000;
@@ -36,4 +36,9 @@
 }
 .forSpacingRestOthers{
     color: black;
+}
+.jumbotron{
+    width: 70%;
+    height: 50%;
+    margin-left: 20%;
 }

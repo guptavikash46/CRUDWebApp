@@ -7,7 +7,6 @@
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
-    <script src="Register.js"></script>
 
     <!--    bootstrap CDN:-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -21,9 +20,9 @@
 <div class="container">
     <br>
     <div class="form-group">
-        <h1>Register here</h1></br>
+        <h1>Registration</h1></br>
         <label for="exampleInputEmail1">Username</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" required>
         <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>
     </div>
     <div class="form-group">
@@ -33,8 +32,8 @@
 
     <p>Already have an account? then: <a href="/login">Login</a> </p>
 
-    <button type="submit" class="btn btn-primary">Register</button>
-    </form>
+    <button type="submit" id="registerButton" class="btn btn-primary">Register</button>
 </div>
+<script src="Register.js"></script>
 </body>
 </html>

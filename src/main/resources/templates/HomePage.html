@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <link rel="stylesheet" href="NavBar.css">
-    <script src="homPage.js"></script>
 
 </head>
 <body>
@@ -38,41 +37,42 @@
             <ul class="list-unstyled-components">
 
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>Home</strong></a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>Student Operations</strong></a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li class="main-ul-elements">
-                            <a href="#" class="forSpacingRestOthers" >Home 1</a>
+                            <a href="#" class="forSpacingRestOthers" >Add a student</a>
                         </li >
                         <li class="main-ul-elements">
-                            <a href="#" class="forSpacingRestOthers" >Home 2</a>
+                            <a href="#" class="forSpacingRestOthers" >See all students</a>
                         </li >
                         <li class="main-ul-elements">
-                            <a href="#"  class="forSpacingRestOthers">Home 3</a>
+                            <a href="#"  class="forSpacingRestOthers">Remove Student(s)</a>
                         </li>
                     </ul>
                 </li>
-                <li class="main-ul-elements">
-                    <a href="#" class="forSpacing"><strong>About</strong></a>
-                </li>
+
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>Pages</strong></a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>University Operations</strong></a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li class="main-ul-elements">
-                            <a href="#" class="forSpacingRestOthers">Page 1</a>
+                            <a href="#" class="forSpacingRestOthers">Add a university</a>
                         </li>
                         <li class="main-ul-elements">
-                            <a href="#" class="forSpacingRestOthers">Page 2</a>
+                            <a href="#" class="forSpacingRestOthers">See all universities</a>
                         </li>
                         <li class="main-ul-elements">
-                            <a href="#" class="forSpacingRestOthers">Page 3</a>
+                            <a href="#" class="forSpacingRestOthers">Update university info</a>
                         </li>
                     </ul>
                 </li>
                 <li  class="main-ul-elements">
-                    <a href="#" class="forSpacing"><strong>Portfolio</strong></a>
+                    <a href="#" class="forSpacing"><strong>About</strong></a>
+                </li>
+                <li class="main-ul-elements">
+                    <a href="#" class="forSpacing"><strong>Contact</strong></a>
                 </li>
                 <li  class="main-ul-elements">
-                    <a href="#" class="forSpacing"><strong>Contact</strong></a>
+                    <a href="#" class="forSpacing" id="logOutButton"><strong>Log Out</strong></a>
                 </li>
             </ul>
 
@@ -82,12 +82,20 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
-
                 </div>
             </nav>
         </div>
     </div>
 
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, there!</h1>
+        <p class="lead">This web application performs basic database operations such as Create, Read, Update & Delete.<br/>
+                        You can add a student to a university, see all the students enrolled, add a university and even remove.</p>
+        <hr class="my-4">
+        <p>Start by adding a university from the button below and then add a student.</p>
+        <a class="btn btn-success" href="#" role="button">Add University</a>
+    </div>
+
+<script src="homPage.js"></script>
 </body>
 </html>

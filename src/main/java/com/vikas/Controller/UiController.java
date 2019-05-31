@@ -1,5 +1,6 @@
 package com.vikas.Controller;
 
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,5 +22,11 @@ public class UiController {
     @RequestMapping("/app/home")
     public String homePage(){
         return "HomePage";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(){
+        SecurityContextHolder.clearContext();
+        return "Login";
     }
 }
