@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+
+    <!--    bootstrap CDN:-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="AddStudent.css">
+</head>
+<body>
+<div class="card">
+    <div class="card-body">
+        <h1 align="center">Add a student</h1>
+    </div>
+</div>
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3 align="center">Navigation Panel</h3>
+        </div>
+        <h3 align="center"><strong>Options</strong></h3>
+        <ul class="list-unstyled-components">
+
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>Student Operations</strong></a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li class="main-ul-elements">
+                        <a href="#" class="forSpacingRestOthers" >Add a student</a>
+                    </li >
+                    <li class="main-ul-elements">
+                        <a href="#" class="forSpacingRestOthers" >See all students</a>
+                    </li >
+                    <li class="main-ul-elements">
+                        <a href="#"  class="forSpacingRestOthers">Remove Student(s)</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>University Operations</strong></a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li class="main-ul-elements">
+                        <a href="#" class="forSpacingRestOthers">Add a university</a>
+                    </li>
+                    <li class="main-ul-elements">
+                        <a href="#" class="forSpacingRestOthers">See all universities</a>
+                    </li>
+                    <li class="main-ul-elements">
+                        <a href="#" class="forSpacingRestOthers">Update university info</a>
+                    </li>
+                </ul>
+            </li>
+            <li  class="main-ul-elements">
+                <a href="#" class="forSpacing"><strong>About</strong></a>
+            </li>
+            <li class="main-ul-elements">
+                <a href="#" class="forSpacing"><strong>Contact</strong></a>
+            </li>
+            <li  class="main-ul-elements">
+                <a href="#" class="forSpacing" id="logOutButton"><strong>Log Out</strong></a>
+            </li>
+        </ul>
+
+    </nav>
+    <!-- Page Content -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid" id="jumbotronAddStu">
+    <div class="container">
+        <div class="form-group">
+            <label for="stuName">Name</label>
+            <input type="text" class="form-control" id="stuName" aria-describedby="emailHelp" placeholder="Enter Student name" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Course</label>
+            <input type="text" class="form-control" id="course" aria-describedby="emailHelp" placeholder="Enter course name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Enter age" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+        </div>
+
+        <label for="uniSelect">Select the university below:</label>
+        <select class="custom-select" id="uniSelect">
+            <option selected>choose here</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+        <button type="button" class="btn btn-dark" id="addButton">Submit</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

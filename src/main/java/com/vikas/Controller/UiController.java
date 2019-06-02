@@ -29,4 +29,9 @@ public class UiController {
         SecurityContextHolder.clearContext();
         return "Login";
     }
+
+    @RequestMapping("/app/addStudent")
+    public String addStudent(){
+        return "AddStudent";
+    }
 }

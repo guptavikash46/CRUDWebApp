@@ -5,7 +5,12 @@ $(document).ready(function () {
 });
 
 $("#logOutButton").on("click", function () {
-    alert("You've been logged out, click on 'OK' to redirect to login page.");
-    window.location.href = "/logout"
+    var value = confirm("Are you sure you want to logout?");
+    if (value == true)
+    window.location.href = "/logout";
 
-})
+});
+$("#addStudentOption").on("click", function () {
+    window.location.href = "/app/addStudent";
+
+});

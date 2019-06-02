@@ -1,0 +1,13 @@
+#jumbotronAddStu{
+    width: 70%;
+    height: 50%;
+    margin-left: 24%;
+}
+.card{
+    color: white;
+    font-size: large;
+    background: black;
+}
+#addButton{
+    margin-top: 20px;
+}
