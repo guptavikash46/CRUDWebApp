@@ -17,4 +17,7 @@ public interface UnivRepository extends JpaRepository<University, Integer> {
     @Query("select u.Univ_id from University u where u.Univ_id =:ID")
     Integer isUniversityThere(@Param("ID") Integer ID);
 
+    @Query("select u.Univ_id from University u where u.Univ_name=:name")
+    Integer getUniID(@Param("name") String name);
+
 }

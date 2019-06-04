@@ -42,7 +42,7 @@
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><strong>Student Operations</strong></a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li class="main-ul-elements">
-                        <a href="#" class="forSpacingRestOthers" >Add a student</a>
+                        <a href="#" class="forSpacingRestOthers" id="addStudentOption">Add a student</a>
                     </li >
                     <li class="main-ul-elements">
                         <a href="#" class="forSpacingRestOthers" >See all students</a>
@@ -93,32 +93,30 @@
     <div class="container">
         <div class="form-group">
             <label for="stuName">Name</label>
-            <input type="text" class="form-control" id="stuName" aria-describedby="emailHelp" placeholder="Enter Student name" required>
+            <input type="text" class="form-control" id="stuName" aria-describedby="emailHelp" placeholder="Give Student name" required>
         </div>
         <div class="form-group">
             <label for="course">Course</label>
-            <input type="text" class="form-control" id="course" aria-describedby="emailHelp" placeholder="Enter course name" required>
+            <input type="text" class="form-control" id="course" aria-describedby="emailHelp" placeholder="Give course name" required>
         </div>
         <div class="form-group">
             <label for="age">Age</label>
-            <input type="text" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Enter age" required>
+            <input type="text" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Give age" required>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Give email" required>
         </div>
 
         <label for="uniSelect">Select the university below:</label>
         <select class="custom-select" id="uniSelect">
             <option selected>choose here</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
         </select>
 
         <button type="button" class="btn btn-dark" id="addButton">Submit</button>
         </div>
     </div>
 </div>
+<script src="AddStudentJS.js"></script>
 </body>
 </html>

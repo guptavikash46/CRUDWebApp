@@ -3,11 +3,11 @@ package com.vikas.Controller;
 
 import com.vikas.Model.University;
 import com.vikas.Service.University.AddUniversityService;
+import com.vikas.Service.University.GetUnivIDService;
 import com.vikas.Service.University.ShowAllUniversitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -18,6 +18,9 @@ public class UniversityController {
     private AddUniversityService addUniversityService;
     @Autowired
     private ShowAllUniversitiesService showAllUniversitiesService;
+
+    @Autowired
+    private GetUnivIDService getUnivIDService;
 
     @PostMapping("/app/addUniv")
     public University addUniversity(@RequestParam(value = "UniName") String UniName,
@@ -36,9 +39,9 @@ public class UniversityController {
         return showAllUniversitiesService.showAllUniversities();
     }
 
-    @DeleteMapping("/app/deleteUniv/{id}")
-    public String deleteUniById(@PathVariable Integer id){
+    @GetMapping("/app/getUniID/{name}")
+    public Integer getUniId(@PathVariable String name){
 
-        return "Item not found!";
+        return getUnivIDService.getUniID(name);
     }
 }
