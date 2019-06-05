@@ -1,0 +1,9 @@
+.card{
+    color: white;
+    font-size: large;
+    background: rgba(0, 0, 0, 0.78);
+}
+
+#studentTable{
+    margin-left: 12%;
+}

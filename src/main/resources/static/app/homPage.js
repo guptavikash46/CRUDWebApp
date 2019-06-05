@@ -13,3 +13,7 @@ $("#addStudentOption").on("click", function () {
     window.location.href = "/app/addStudent";
 
 });
+$("#allStudentOption").on("click", function () {
+    window.location.href = "/app/students";
+
+});

@@ -28,6 +28,10 @@ $("#addStudentOption").on("click", function () {
     window.location.href = "/app/addStudent";
 
 });
+$("#allStudentOption").on("click", function () {
+    window.location.href = "/app/students";
+
+});
 //addStudent button functionality
 
 $("#addButton").on("click", function () {

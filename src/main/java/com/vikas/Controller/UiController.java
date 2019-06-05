@@ -34,4 +34,9 @@ public class UiController {
     public String addStudent(){
         return "AddStudent";
     }
+
+    @RequestMapping("/app/students")
+    public String allStudents(){
+        return "AllStudents";
+    }
 }

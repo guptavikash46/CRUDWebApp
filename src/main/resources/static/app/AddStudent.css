@@ -6,7 +6,7 @@
 .card{
     color: white;
     font-size: large;
-    background: black;
+    background: rgba(0, 0, 0, 0.78);
 }
 #addButton{
     margin-top: 20px;
