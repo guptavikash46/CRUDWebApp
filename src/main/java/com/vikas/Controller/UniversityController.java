@@ -34,7 +34,6 @@ public class UniversityController {
 
     }
     @GetMapping("/app/universities")
-
     public List<University> showAllUniversities(){
         return showAllUniversitiesService.showAllUniversities();
     }

@@ -44,4 +44,21 @@ public class UiController {
     public String removeStudents(){
         return "RemoveStudents";
     }
+
+    //for University operations
+
+    @RequestMapping("/app/addUniversity")
+    public String addUniv(){
+        return "AddUniv";
+    }
+
+    @RequestMapping("/app/allUniversities")
+    public String allUniv(){
+        return "AllUniv";
+    }
+
+    @RequestMapping("/app/updateUniversities")
+    public String updateUniv(){
+        return "UpdateUniv";
+    }
 }

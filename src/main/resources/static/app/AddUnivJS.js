@@ -16,7 +16,6 @@ $("#removeStudentOption").on("click", function () {
     window.location.href = "/app/removeStu";
 
 });
-
 $("#addUnivOption").on("click", function () {
     window.location.href = "/app/addUniversity";
 });
@@ -28,33 +27,30 @@ $("#allUnivOption").on("click", function () {
 $("#updateUnivOption").on("click", function () {
     window.location.href = "/app/updateUniversities";
 });
+
 $("#homePageOption").on("click", function () {
     window.location.href = "/app/home";
 });
 
-$(document).ready(function () {
-    var table = $("#studentTable");
+$("#addUniversityForm").submit(function (event) {
+    event.preventDefault();
+    var univName = $("#uniName").val();
+    var univCountry = $("#country").val();
+
     $.ajax({
-        url: "http://localhost:8080/app/allStudents",
-        type: "GET",
+        url: "http://localhost:8080/app/addUniv",
+        type: "POST",
+        data: { UniName: univName, UniCountry: univCountry},
         dataType: "json",
     })
         .done(function (response) {
-            $.each(response, function (i, values) {
-                table.append("<tr>\n" +
-                    "            <th scope=\"row\">"+values.stu_id+"</th>\n" +
-                    "            <td>"+values.stu_name+"</td>\n" +
-                    "            <td>"+values.age+"</td>\n" +
-                    "            <td>"+values.course+"</td>\n" +
-                    "            <td>"+values.email+"</td>\n" +
-                    "            <td>"+values.university.univ_id+"</td>\n" +
-                    "        </tr>");
-            })
-            
+            console.log(response);
+                alert("Successfully added the university: "+ response.univ_name+ " in the database.");
+                location.reload();
         })
         .fail(function (xhr, status, errorThrown) {
             alert("Oops! looks like this error is rare and shouldn't happen, give us some time to think!");
             console.log(status);
             console.log(errorThrown);
-        });
+        })
 });
