@@ -17,6 +17,18 @@ $("#removeStudentOption").on("click", function () {
 
 });
 
+$("#addUnivOption").on("click", function () {
+    window.location.href = "/app/addUniversity";
+});
+
+$("#allUnivOption").on("click", function () {
+    window.location.href = "/app/allUniversities";
+});
+
+$("#updateUnivOption").on("click", function () {
+    window.location.href = "/app/updateUniversities";
+});
+
 $("#removeStuForm").submit(function (event) {
     event.preventDefault();
     var studentID = $("#studentID").val();

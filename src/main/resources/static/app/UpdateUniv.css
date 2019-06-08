@@ -1,0 +1,10 @@
+.card{
+    color: white;
+    font-size: large;
+    background: rgba(0, 0, 0, 0.78);
+}
+#updateUnivInfoJumbotron{
+    width: 70%;
+    height: 50%;
+    margin-left: 24%;
+}
