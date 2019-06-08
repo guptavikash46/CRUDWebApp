@@ -1,5 +1,5 @@
-$("#registerButton").on("click", function () {
-
+$("#registerForm").submit( function (e) {
+    e.preventDefault();
     var username = $("#exampleInputEmail1").val();
     var password = $("#exampleInputPassword1").val();
 

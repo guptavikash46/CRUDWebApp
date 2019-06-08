@@ -1,0 +1,8 @@
+.card{
+    color: white;
+    font-size: large;
+    background: rgba(0, 0, 0, 0.78);
+}
+#removeStuForm{
+    margin-left: 20%;
+}

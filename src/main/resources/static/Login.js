@@ -1,4 +1,5 @@
-$("#loginButton").on("click", function () {
+$("#loginForm").submit(function (event) {
+    event.preventDefault();
     $.ajax({
         url: "http://localhost:8080/login/user",
         type: "GET",

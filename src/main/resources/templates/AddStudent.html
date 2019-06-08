@@ -48,7 +48,7 @@
                         <a href="#" class="forSpacingRestOthers" id="allStudentOption">See all students</a>
                     </li >
                     <li class="main-ul-elements">
-                        <a href="#"  class="forSpacingRestOthers">Remove Student(s)</a>
+                        <a href="#"  class="forSpacingRestOthers" id="removeStudentOption">Remove Student(s)</a>
                     </li>
                 </ul>
             </li>
@@ -91,6 +91,7 @@
 
 <div class="jumbotron jumbotron-fluid" id="jumbotronAddStu">
     <div class="container">
+        <form id="addStudentForm">
         <div class="form-group">
             <label for="stuName">Name</label>
             <input type="n" class="form-control" id="stuName" aria-describedby="emailHelp" placeholder="Give Student name" required>
@@ -101,7 +102,7 @@
         </div>
         <div class="form-group">
             <label for="age">Age</label>
-            <input type="number" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Give age" required>
+            <input type="text" class="form-control" id="age" aria-describedby="emailHelp" placeholder="Give age" required>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
@@ -113,8 +114,8 @@
             <option selected>choose here</option>
         </select>
 
-        <button type="button" class="btn btn-dark" id="addButton">Submit</button>
-        </div>
+        <button type="submit" class="btn btn-dark" id="addButton">Submit</button>
+    </form>
     </div>
 </div>
 <script src="AddStudentJS.js"></script>

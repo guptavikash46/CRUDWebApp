@@ -32,9 +32,14 @@ $("#allStudentOption").on("click", function () {
     window.location.href = "/app/students";
 
 });
+$("#removeStudentOption").on("click", function () {
+    window.location.href = "/app/removeStu";
+
+});
 //addStudent button functionality
 
-$("#addButton").on("click", function () {
+$("#addStudentForm").submit( function (e) {
+    e.preventDefault();
 
     var name = $("#stuName").val();
     var course = $("#course").val();
@@ -42,7 +47,7 @@ $("#addButton").on("click", function () {
     var email = $("#email").val();
     var university = $("#uniSelect option:selected").text();
 
-    if (name.length > 0 && course.length > 0 && age.length > 0 && email.length> 0 && university != "choose here") {
+    if (university != "choose here") {
 
         //obtaining university ID & then adding the student to the database.
         $.ajax({
@@ -82,6 +87,6 @@ $("#addButton").on("click", function () {
             });
     }
     else{
-        alert("Please fill all the details!");
+        alert("Please select the university!");
     }
 });

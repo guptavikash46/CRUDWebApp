@@ -12,6 +12,10 @@ $("#allStudentOption").on("click", function () {
     window.location.href = "/app/students";
 
 });
+$("#removeStudentOption").on("click", function () {
+    window.location.href = "/app/removeStu";
+
+});
 
 $(document).ready(function () {
     var table = $("#studentTable");

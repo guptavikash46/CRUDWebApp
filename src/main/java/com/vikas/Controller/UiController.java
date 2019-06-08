@@ -39,4 +39,9 @@ public class UiController {
     public String allStudents(){
         return "AllStudents";
     }
+
+    @RequestMapping("/app/removeStu")
+    public String removeStudents(){
+        return "RemoveStudents";
+    }
 }
